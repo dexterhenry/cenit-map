@@ -9,7 +9,6 @@ h1 {
   text-align: center;
 }
 
-
 /* svg section  */
 .container-svg {
   width: 99 vw;
@@ -50,7 +49,6 @@ h1 {
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
-
   position: absolute;
   top: 0;
 }
