@@ -1,0 +1,67 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* title */
+h1 {
+  text-align: center;
+}
+
+
+/* svg section  */
+.container-svg {
+  width: 99 vw;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-svg {
+  width: 70vw;
+  display: flex;
+  justify-content: center;
+}
+
+.container-svg img {
+  width: 100%;
+}
+
+/* info section */
+
+.gpr-default-info,
+.gpr-scenarios-info,
+.gpr-governance-info,
+.gpr-pic-info,
+.gpr-flow-info,
+.gpr-core-info,
+.gpr-format-pma-info,
+.gpr-monitoring-info,
+.gpr-operation-info,
+.gpr-deploy-info,
+.gpr-integrations-info,
+.gpr-extensions-info {
+  width: 100%;
+  margin: 0;
+  padding: 1rem 4rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+
+  position: absolute;
+  top: 0;
+}
+
+.gpr-default-info {
+  opacity: 1;
+}
+
+.gpr-wrapper {
+  width: 90vw;
+  height: 1rem;
+  position: relative;
+  box-sizing: border-box;
+}
