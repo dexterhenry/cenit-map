@@ -3,28 +3,60 @@
     const $gprDefault = d.querySelector(".gpr-default-info"),
       $svgMap = d.querySelector(".container-svg"),
       gprStyle =
-        "opacity: 1; stroke: rgb(66, 66, 66); stroke-width: 4; fill :rgba(66, 66, 66, 0.1)";
+        "opacity: 1; stroke: rgb(66, 66, 66); stroke-width: 4; fill :rgba(66, 66, 66, 0.1)",
+      // Scenarios Box Section Selectors
+      $gprScenariosInfo = d.querySelector(".gpr-scenarios-info"),
+      $gprScenariosSHover = d.querySelector("#gpr-scenarios-box"),
+      $gprScenariosA2aInfo = d.querySelector(".gpr-scenarios-a2a-info"),
+      $gprScenariosA2aHover = d.querySelector("#gpr-a2a-box");
+
+    // Functions section to apply/remove box styles
+    const gprScenariosBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosInfo.style.opacity = "1";
+      $gprScenariosSHover.style.cssText = gprStyle;
+    };
+
+    const gprA2aBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosA2aInfo.style.opacity = "1";
+      $gprScenariosA2aHover.style.cssText = gprStyle;
+    };
+
+    // Functions section to remove box styles
+    const gprA2aBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosA2aInfo.style.opacity = "0";
+      $gprScenariosA2aHover.removeAttribute("style");
+    };
+
+    const gprScenariosBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosInfo.style.opacity = "0";
+      $gprScenariosSHover.removeAttribute("style");
+    };
+
     $svgMap.addEventListener("mouseover", (e) => {
       e.preventDefault();
 
       switch (e.target.id) {
-        case "gpr-scenarios-box" || "gpr-scenarios-box-1":
-          $gprDefault.style.opacity = "0";
-
-          const $gprScenariosInfo = d.querySelector(".gpr-scenarios-info"),
-            $gprScenariosSHover = d.querySelector("#gpr-scenarios-box");
-
-          $gprScenariosInfo.style.opacity = "1";
-          $gprScenariosSHover.style.cssText = gprStyle;
+        case "gpr-scenarios-box":
+          gprScenariosBoxApplyStyle();
           break;
-        case "gpr-scenarios-box-1":
-          $gprDefault.style.opacity = "0";
+        case "gpr-scenarios-text-box":
+          gprScenariosBoxApplyStyle();
+          break;
 
-          const $gprScenariosInfo1 = d.querySelector(".gpr-scenarios-info"),
-            $gprScenariosSHover1 = d.querySelector("#gpr-scenarios-box");
+        case " gpr-scenarios-box-1":
+          gprScenariosBoxApplyStyle();
+          break;
 
-          $gprScenariosInfo1.style.opacity = "1";
-          $gprScenariosSHover1.style.cssText = gprStyle;
+        case "gpr-a2a-box":
+          gprA2aBoxApplyStyle();
+          break;
+
+        case "gpr-a2a-text-box":
+          gprA2aBoxApplyStyle();
           break;
 
         case "gpr-governance-box":
@@ -111,8 +143,8 @@
           $gprDefault.style.opacity = "0";
 
           const $gprIntegrationsInfo = d.querySelector(
-            ".gpr-integrations-info"
-          ),
+              ".gpr-integrations-info"
+            ),
             $gprIntegrationsHover = d.querySelector("#gpr-integrations-box");
 
           $gprIntegrationsInfo.style.opacity = "1";
@@ -138,14 +170,19 @@
 
       switch (e.target.id) {
         case "gpr-scenarios-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprScenariosInfo = d.querySelector(".gpr-scenarios-info"),
-            $gprScenariosSHover = d.querySelector("#gpr-scenarios-box");
-
-          $gprScenariosInfo.style.opacity = "0";
-          $gprScenariosSHover.removeAttribute("style");
+          gprScenariosBoxRemoveStyle();
           break;
+        case "gpr-scenarios-text-box":
+          gprScenariosBoxRemoveStyle();
+          break;
+
+        case "gpr-a2a-box":
+          gprA2aBoxRemoveStyle();
+          break;
+        case "gpr-a2a-text-box":
+          gprA2aBoxRemoveStyle();
+          break;
+
         case "gpr-scenarios-box-1":
           $gprDefault.style.opacity = "1";
 
@@ -240,8 +277,8 @@
           $gprDefault.style.opacity = "1";
 
           const $gprIntegrationsInfo = d.querySelector(
-            ".gpr-integrations-info"
-          ),
+              ".gpr-integrations-info"
+            ),
             $gprIntegrationsHover = d.querySelector("#gpr-integrations-box");
 
           $gprIntegrationsInfo.style.opacity = "0";
