@@ -26,7 +26,14 @@
       $gprScenariosEventDrivenInfo = d.querySelector(
         ".gpr-scenarios-event-driven-info"
       ),
-      $gprScenariosEventDrivenHover = d.querySelector("#gpr-event-driven-box");
+      $gprScenariosEventDrivenHover = d.querySelector("#gpr-event-driven-box"),
+      // Extensions Box Section Selectors
+      $gprExtensionsInfo = d.querySelector(".gpr-extensions-info"),
+      $gprExtensionsHover = d.querySelector("#gpr-extensions-box"),
+      $gprExtensionsBuiltAppInfo = d.querySelector(".gpr-built-in-app-info"),
+      $gprExtensionsBuiltAppHover = d.querySelector("#gpr-built-in-app-box"),
+      $gprExtensionsEmbeddedAppInfo = d.querySelector(".gpr-embedded-app-info"),
+      $gprExtensionsEmbeddedAppHover = d.querySelector("#gpr-embedded-app-box");
 
     // Functions section to apply box styles
     const gprScenariosBoxApplyStyle = () => {
@@ -77,6 +84,24 @@
       $gprScenariosEventDrivenHover.style.cssText = gprStyle;
     };
 
+    const gprExtensionsBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprExtensionsInfo.style.opacity = "1";
+      $gprExtensionsHover.style.cssText = gprStyle;
+    };
+
+    const gprBuiltAppBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprExtensionsBuiltAppInfo.style.opacity = "1";
+      $gprExtensionsBuiltAppHover.style.cssText = gprStyle;
+    };
+
+    const gprEmbeddedAppBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprExtensionsEmbeddedAppInfo.style.opacity = "1";
+      $gprExtensionsEmbeddedAppHover.style.cssText = gprStyle;
+    };
+
     // Functions section to remove box styles
     const gprA2aBoxRemoveStyle = () => {
       $gprDefault.style.opacity = "1";
@@ -124,6 +149,24 @@
       $gprDefault.style.opacity = "1";
       $gprScenariosEventDrivenInfo.style.opacity = "0";
       $gprScenariosEventDrivenHover.removeAttribute("style");
+    };
+
+    const gprExtensionsBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprExtensionsInfo.style.opacity = "0";
+      $gprExtensionsHover.removeAttribute("style");
+    };
+
+    const gprBuiltAppBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprExtensionsBuiltAppInfo.style.opacity = "0";
+      $gprExtensionsBuiltAppHover.removeAttribute("style");
+    };
+
+    const gprEmbeddedAppBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprExtensionsEmbeddedAppInfo.style.opacity = "0";
+      $gprExtensionsEmbeddedAppHover.removeAttribute("style");
     };
 
     $svgMap.addEventListener("mouseover", (e) => {
@@ -255,13 +298,22 @@
           break;
 
         case "gpr-extensions-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprExtensionsInfo = d.querySelector(".gpr-extensions-info"),
-            $gprExtensionsHover = d.querySelector("#gpr-extensions-box");
-
-          $gprExtensionsInfo.style.opacity = "1";
-          $gprExtensionsHover.style.cssText = gprStyle;
+          gprExtensionsBoxApplyStyle();
+          break;
+        case "gpr-extensions-text-box":
+          gprExtensionsBoxApplyStyle();
+          break;
+        case "gpr-built-in-app-box":
+          gprBuiltAppBoxApplyStyle();
+          break;
+        case "gpr-built-in-app-text-box":
+          gprBuiltAppBoxApplyStyle();
+          break;
+        case "gpr-embedded-app-box":
+          gprEmbeddedAppBoxApplyStyle();
+          break;
+        case "gpr-embedded-app-text-box":
+          gprEmbeddedAppBoxApplyStyle();
           break;
 
         case "gpr-integrations-box":
@@ -409,15 +461,14 @@
           break;
 
         case "gpr-extensions-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprExtensionsInfo = d.querySelector(".gpr-extensions-info"),
-            $gprExtensionsHover = d.querySelector("#gpr-extensions-box");
-
-          $gprExtensionsInfo.style.opacity = "0";
-          $gprExtensionsHover.removeAttribute("style");
+          gprExtensionsBoxRemoveStyle();
           break;
-
+        case "gpr-built-in-app-box":
+          gprBuiltAppBoxRemoveStyle();
+          break;
+        case "gpr-embedded-app-box":
+          gprEmbeddedAppBoxRemoveStyle();
+          break;
         case "gpr-integrations-box":
           $gprDefault.style.opacity = "1";
 
