@@ -33,7 +33,34 @@
       $gprExtensionsBuiltAppInfo = d.querySelector(".gpr-built-in-app-info"),
       $gprExtensionsBuiltAppHover = d.querySelector("#gpr-built-in-app-box"),
       $gprExtensionsEmbeddedAppInfo = d.querySelector(".gpr-embedded-app-info"),
-      $gprExtensionsEmbeddedAppHover = d.querySelector("#gpr-embedded-app-box");
+      $gprExtensionsEmbeddedAppHover = d.querySelector("#gpr-embedded-app-box"),
+      // Governance Box Section Selectors
+      $gprGovernanceInfo = d.querySelector(".gpr-governance-info"),
+      $gprGovernanceSHover = d.querySelector("#gpr-governance-box"),
+      // Core Box Section Selectors
+      $gprCoreInfo = d.querySelector(".gpr-core-info"),
+      $gprCoreHover = d.querySelector("#gpr-core-box"),
+      // Flow Box Section Selectors
+      $gprFlowInfo = d.querySelector(".gpr-flow-info"),
+      $gprFlowHover = d.querySelector("#gpr-flow-box"),
+      // Pic Box Section Selectors
+      $gprPicInfo = d.querySelector(".gpr-pic-info"),
+      $gprPicHover = d.querySelector("#gpr-pic-box"),
+      // Format pma Box Section Selectors
+      $gprFormatInfo = d.querySelector(".gpr-format-pma-info"),
+      $gprFormatHover = d.querySelector("#gpr-format-pma-box"),
+      // Monitoring Box Section Selectors
+      $gprMonitoringInfo = d.querySelector(".gpr-monitoring-info"),
+      $gprMonitoringHover = d.querySelector("#gpr-monitoring-box"),
+      // Operation Box Section Selectors
+      $gprOperationInfo = d.querySelector(".gpr-operation-info"),
+      $gprOperationHover = d.querySelector("#gpr-operation-box"),
+      // Integrations Box Section Selectors
+      $gprIntegrationsInfo = d.querySelector(".gpr-integrations-info"),
+      $gprIntegrationsHover = d.querySelector("#gpr-integrations-box"),
+      // Deploy Box Section Selectors
+      $gprDeployInfo = d.querySelector(".gpr-deploy-info"),
+      $gprDeployHover = d.querySelector("#gpr-deploy-box");
 
     // Functions section to apply box styles
     const gprScenariosBoxApplyStyle = () => {
@@ -100,6 +127,60 @@
       $gprDefault.style.opacity = "0";
       $gprExtensionsEmbeddedAppInfo.style.opacity = "1";
       $gprExtensionsEmbeddedAppHover.style.cssText = gprStyle;
+    };
+
+    const gprGovernanceBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprGovernanceInfo.style.opacity = "1";
+      $gprGovernanceSHover.style.cssText = gprStyle;
+    };
+
+    const gprCoreBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprCoreInfo.style.opacity = "1";
+      $gprCoreHover.style.cssText = gprStyle;
+    };
+
+    const gprFlowBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprFlowInfo.style.opacity = "1";
+      $gprFlowHover.style.cssText = gprStyle;
+    };
+
+    const gprPicBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprPicInfo.style.opacity = "1";
+      $gprPicHover.style.cssText = gprStyle;
+    };
+
+    const gprFormatPmaBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprFormatInfo.style.opacity = "1";
+      $gprFormatHover.style.cssText = gprStyle;
+    };
+
+    const gprMonitoringBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprMonitoringInfo.style.opacity = "1";
+      $gprMonitoringHover.style.cssText = gprStyle;
+    };
+
+    const gprOperationBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprOperationInfo.style.opacity = "1";
+      $gprOperationHover.style.cssText = gprStyle;
+    };
+
+    const gprIntegrationsBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprIntegrationsInfo.style.opacity = "1";
+      $gprIntegrationsHover.style.cssText = gprStyle;
+    };
+
+    const gprDeployBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprDeployInfo.style.opacity = "1";
+      $gprDeployHover.style.cssText = gprStyle;
     };
 
     // Functions section to remove box styles
@@ -169,6 +250,62 @@
       $gprExtensionsEmbeddedAppHover.removeAttribute("style");
     };
 
+    const gprGovernanceBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprGovernanceInfo.style.opacity = "0";
+      $gprGovernanceSHover.removeAttribute("style");
+    };
+
+    const gprCoreBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprCoreInfo.style.opacity = "0";
+      $gprCoreHover.removeAttribute("style");
+    };
+
+    const gprFlowBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprFlowInfo.style.opacity = "0";
+      $gprFlowHover.removeAttribute("style");
+    };
+
+    const gprPicBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprPicInfo.style.opacity = "0";
+      $gprPicHover.removeAttribute("style");
+    };
+
+    const gpFormatPmaRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprFormatInfo.style.opacity = "0";
+      $gprFormatHover.removeAttribute("style");
+    };
+
+    const gpMonitoringRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprMonitoringInfo.style.opacity = "0";
+      $gprMonitoringHover.removeAttribute("style");
+    };
+
+    const gpOperationRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprOperationInfo.style.opacity = "0";
+      $gprOperationHover.removeAttribute("style");
+    };
+
+    const gpIntegrationsRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprIntegrationsInfo.style.opacity = "0";
+      $gprIntegrationsHover.removeAttribute("style");
+    };
+
+    const gpDeployRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprDeployInfo.style.opacity = "0";
+      $gprDeployHover.removeAttribute("style");
+    };
+    // End Functions Section
+
+    // Mouse over boxes Section
     $svgMap.addEventListener("mouseover", (e) => {
       e.preventDefault();
 
@@ -228,75 +365,26 @@
           gprEventDrivenBoxApplyStyle();
           break;
         case "gpr-governance-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprGovernanceInfo = d.querySelector(".gpr-governance-info"),
-            $gprGovernanceSHover = d.querySelector("#gpr-governance-box");
-
-          $gprGovernanceInfo.style.opacity = "1";
-          $gprGovernanceSHover.style.cssText = gprStyle;
+          gprGovernanceBoxApplyStyle();
           break;
-
         case "gpr-core-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprCoreInfo = d.querySelector(".gpr-core-info"),
-            $gprCoreHover = d.querySelector("#gpr-core-box");
-
-          $gprCoreInfo.style.opacity = "1";
-          $gprCoreHover.style.cssText = gprStyle;
+          gprCoreBoxApplyStyle();
           break;
-
         case "gpr-flow-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprFlowInfo = d.querySelector(".gpr-flow-info"),
-            $gprFlowHover = d.querySelector("#gpr-flow-box");
-
-          $gprFlowInfo.style.opacity = "1";
-          $gprFlowHover.style.cssText = gprStyle;
+          gprFlowBoxApplyStyle();
           break;
-
         case "gpr-pic-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprPicInfo = d.querySelector(".gpr-pic-info"),
-            $gprPicHover = d.querySelector("#gpr-pic-box");
-
-          $gprPicInfo.style.opacity = "1";
-          $gprPicHover.style.cssText = gprStyle;
+          gprPicBoxApplyStyle();
           break;
-
         case "gpr-format-pma-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprFormatInfo = d.querySelector(".gpr-format-pma-info"),
-            $gprFormatHover = d.querySelector("#gpr-format-pma-box");
-
-          $gprFormatInfo.style.opacity = "1";
-          $gprFormatHover.style.cssText = gprStyle;
+          gprFormatPmaBoxApplyStyle();
           break;
-
         case "gpr-monitoring-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprMonitoringInfo = d.querySelector(".gpr-monitoring-info"),
-            $gprMonitoringHover = d.querySelector("#gpr-monitoring-box");
-
-          $gprMonitoringInfo.style.opacity = "1";
-          $gprMonitoringHover.style.cssText = gprStyle;
+          gprMonitoringBoxApplyStyle();
           break;
-
         case "gpr-operation-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprOperationInfo = d.querySelector(".gpr-operation-info"),
-            $gprOperationHover = d.querySelector("#gpr-operation-box");
-
-          $gprOperationInfo.style.opacity = "1";
-          $gprOperationHover.style.cssText = gprStyle;
+          gprOperationBoxApplyStyle();
           break;
-
         case "gpr-extensions-box":
           gprExtensionsBoxApplyStyle();
           break;
@@ -315,38 +403,26 @@
         case "gpr-embedded-app-text-box":
           gprEmbeddedAppBoxApplyStyle();
           break;
-
         case "gpr-integrations-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprIntegrationsInfo = d.querySelector(
-              ".gpr-integrations-info"
-            ),
-            $gprIntegrationsHover = d.querySelector("#gpr-integrations-box");
-
-          $gprIntegrationsInfo.style.opacity = "1";
-          $gprIntegrationsHover.style.cssText = gprStyle;
+          gprIntegrationsBoxApplyStyle();
           break;
-
         case "gpr-deploy-box":
-          $gprDefault.style.opacity = "0";
-
-          const $gprDeployInfo = d.querySelector(".gpr-deploy-info"),
-            $gprDeployHover = d.querySelector("#gpr-deploy-box");
-
-          $gprDeployInfo.style.opacity = "1";
-          $gprDeployHover.style.cssText = gprStyle;
+          gprDeployBoxApplyStyle();
           break;
         default:
           break;
       }
     });
 
+    // Mouse out boxes Section
     $svgMap.addEventListener("mouseout", (e) => {
       e.preventDefault();
 
       switch (e.target.id) {
         case "gpr-scenarios-box":
+          gprScenariosBoxRemoveStyle();
+          break;
+        case "gpr-scenarios-box-1":
           gprScenariosBoxRemoveStyle();
           break;
         case "gpr-scenarios-text-box":
@@ -379,87 +455,27 @@
         case "gpr-event-driven-box":
           gprEventDrivenBoxRemoveStyle();
           break;
-
-        case "gpr-scenarios-box-1":
-          $gprDefault.style.opacity = "1";
-
-          const $gprScenariosInfo1 = d.querySelector(".gpr-scenarios-info"),
-            $gprScenariosSHover1 = d.querySelector("#gpr-scenarios-box");
-
-          $gprScenariosInfo1.style.opacity = "0";
-          $gprScenariosSHover1.removeAttribute("style");
-          break;
-
         case "gpr-governance-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprGovernanceInfo = d.querySelector(".gpr-governance-info"),
-            $gprGovernanceSHover = d.querySelector("#gpr-governance-box");
-
-          $gprGovernanceInfo.style.opacity = "0";
-          $gprGovernanceSHover.removeAttribute("style");
+          gprGovernanceBoxRemoveStyle();
           break;
-
         case "gpr-core-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprCoreInfo = d.querySelector(".gpr-core-info"),
-            $gprCoreHover = d.querySelector("#gpr-core-box");
-
-          $gprCoreInfo.style.opacity = "0";
-          $gprCoreHover.removeAttribute("style");
+          gprCoreBoxRemoveStyle();
           break;
-
         case "gpr-flow-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprFlowInfo = d.querySelector(".gpr-flow-info"),
-            $gprFlowHover = d.querySelector("#gpr-flow-box");
-
-          $gprFlowInfo.style.opacity = "0";
-          $gprFlowHover.removeAttribute("style");
+          gprFlowBoxRemoveStyle();
           break;
-
         case "gpr-pic-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprPicInfo = d.querySelector(".gpr-pic-info"),
-            $gprPicHover = d.querySelector("#gpr-pic-box");
-
-          $gprPicInfo.style.opacity = "0";
-          $gprPicHover.removeAttribute("style");
+          gprPicBoxRemoveStyle();
           break;
-
         case "gpr-format-pma-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprFormatInfo = d.querySelector(".gpr-format-pma-info"),
-            $gprFormatHover = d.querySelector("#gpr-format-pma-box");
-
-          $gprFormatInfo.style.opacity = "0";
-          $gprFormatHover.removeAttribute("style");
+          gpFormatPmaRemoveStyle();
           break;
-
         case "gpr-monitoring-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprMonitoringInfo = d.querySelector(".gpr-monitoring-info"),
-            $gprMonitoringHover = d.querySelector("#gpr-monitoring-box");
-
-          $gprMonitoringInfo.style.opacity = "0";
-          $gprMonitoringHover.removeAttribute("style");
+          gpMonitoringRemoveStyle();
           break;
-
         case "gpr-operation-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprOperationInfo = d.querySelector(".gpr-operation-info"),
-            $gprOperationHover = d.querySelector("#gpr-operation-box");
-
-          $gprOperationInfo.style.opacity = "0";
-          $gprOperationHover.removeAttribute("style");
+          gpOperationRemoveStyle();
           break;
-
         case "gpr-extensions-box":
           gprExtensionsBoxRemoveStyle();
           break;
@@ -470,25 +486,10 @@
           gprEmbeddedAppBoxRemoveStyle();
           break;
         case "gpr-integrations-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprIntegrationsInfo = d.querySelector(
-              ".gpr-integrations-info"
-            ),
-            $gprIntegrationsHover = d.querySelector("#gpr-integrations-box");
-
-          $gprIntegrationsInfo.style.opacity = "0";
-          $gprIntegrationsHover.removeAttribute("style");
+          gpIntegrationsRemoveStyle();
           break;
-
         case "gpr-deploy-box":
-          $gprDefault.style.opacity = "1";
-
-          const $gprDeployInfo = d.querySelector(".gpr-deploy-info"),
-            $gprDeployHover = d.querySelector("#gpr-deploy-box");
-
-          $gprDeployInfo.style.opacity = "0";
-          $gprDeployHover.removeAttribute("style");
+          gpDeployRemoveStyle();
           break;
         default:
           break;
