@@ -8,9 +8,27 @@
       $gprScenariosInfo = d.querySelector(".gpr-scenarios-info"),
       $gprScenariosSHover = d.querySelector("#gpr-scenarios-box"),
       $gprScenariosA2aInfo = d.querySelector(".gpr-scenarios-a2a-info"),
-      $gprScenariosA2aHover = d.querySelector("#gpr-a2a-box");
+      $gprScenariosA2aHover = d.querySelector("#gpr-a2a-box"),
+      $gprScenariosB2bInfo = d.querySelector(".gpr-scenarios-b2b-info"),
+      $gprScenariosB2bHover = d.querySelector("#gpr-b2b-box"),
+      $gprScenariosErpInfo = d.querySelector(".gpr-scenarios-erp-info"),
+      $gprScenariosErpHover = d.querySelector("#gpr-erp-box"),
+      $gprScenariosCloudInfo = d.querySelector(
+        ".gpr-scenarios-cloud-services-info"
+      ),
+      $gprScenariosCloudHover = d.querySelector("#gpr-cloud-services-box"),
+      $gprScenariosSpaInfo = d.querySelector(".gpr-scenarios-spa-info"),
+      $gprScenariosSpaHover = d.querySelector("#gpr-spa-box"),
+      $gprScenariosMobileAppInfo = d.querySelector(
+        ".gpr-scenarios-mobile-app-info"
+      ),
+      $gprScenariosMobileAppHover = d.querySelector("#gpr-mobile-app-box"),
+      $gprScenariosEventDrivenInfo = d.querySelector(
+        ".gpr-scenarios-event-driven-info"
+      ),
+      $gprScenariosEventDrivenHover = d.querySelector("#gpr-event-driven-box");
 
-    // Functions section to apply/remove box styles
+    // Functions section to apply box styles
     const gprScenariosBoxApplyStyle = () => {
       $gprDefault.style.opacity = "0";
       $gprScenariosInfo.style.opacity = "1";
@@ -21,6 +39,42 @@
       $gprDefault.style.opacity = "0";
       $gprScenariosA2aInfo.style.opacity = "1";
       $gprScenariosA2aHover.style.cssText = gprStyle;
+    };
+
+    const gprB2bBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosB2bInfo.style.opacity = "1";
+      $gprScenariosB2bHover.style.cssText = gprStyle;
+    };
+
+    const gprErpBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosErpInfo.style.opacity = "1";
+      $gprScenariosErpHover.style.cssText = gprStyle;
+    };
+
+    const gprCloudBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosCloudInfo.style.opacity = "1";
+      $gprScenariosCloudHover.style.cssText = gprStyle;
+    };
+
+    const gprSpaBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosSpaInfo.style.opacity = "1";
+      $gprScenariosSpaHover.style.cssText = gprStyle;
+    };
+
+    const gprMobileAppBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosMobileAppInfo.style.opacity = "1";
+      $gprScenariosMobileAppHover.style.cssText = gprStyle;
+    };
+
+    const gprEventDrivenBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprScenariosEventDrivenInfo.style.opacity = "1";
+      $gprScenariosEventDrivenHover.style.cssText = gprStyle;
     };
 
     // Functions section to remove box styles
@@ -36,6 +90,42 @@
       $gprScenariosSHover.removeAttribute("style");
     };
 
+    const gprB2bBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosB2bInfo.style.opacity = "0";
+      $gprScenariosB2bHover.removeAttribute("style");
+    };
+
+    const gprErpBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosErpInfo.style.opacity = "0";
+      $gprScenariosErpHover.removeAttribute("style");
+    };
+
+    const gprCloudBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosCloudInfo.style.opacity = "0";
+      $gprScenariosCloudHover.removeAttribute("style");
+    };
+
+    const gprSpaBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosSpaInfo.style.opacity = "0";
+      $gprScenariosSpaHover.removeAttribute("style");
+    };
+
+    const gprMobileAppBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosMobileAppInfo.style.opacity = "0";
+      $gprScenariosMobileAppHover.removeAttribute("style");
+    };
+
+    const gprEventDrivenBoxRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprScenariosEventDrivenInfo.style.opacity = "0";
+      $gprScenariosEventDrivenHover.removeAttribute("style");
+    };
+
     $svgMap.addEventListener("mouseover", (e) => {
       e.preventDefault();
 
@@ -46,19 +136,54 @@
         case "gpr-scenarios-text-box":
           gprScenariosBoxApplyStyle();
           break;
-
         case " gpr-scenarios-box-1":
           gprScenariosBoxApplyStyle();
           break;
-
         case "gpr-a2a-box":
           gprA2aBoxApplyStyle();
           break;
-
         case "gpr-a2a-text-box":
           gprA2aBoxApplyStyle();
           break;
-
+        case "gpr-b2b-box":
+          gprB2bBoxApplyStyle();
+          break;
+        case "gpr-b2b-text-box":
+          gprB2bBoxApplyStyle();
+          break;
+        case "gpr-erp-box":
+          gprErpBoxApplyStyle();
+          break;
+        case "gpr-erp-text-box":
+          gprErpBoxApplyStyle();
+          break;
+        case "gpr-cloud-services-box":
+          gprCloudBoxApplyStyle();
+          break;
+        case "gpr-cloud-services-text1-box":
+          gprCloudBoxApplyStyle();
+          break;
+        case "gpr-cloud-services-text2-box":
+          gprCloudBoxApplyStyle();
+          break;
+        case "gpr-spa-box":
+          gprSpaBoxApplyStyle();
+          break;
+        case "gpr-spa-text-box":
+          gprSpaBoxApplyStyle();
+          break;
+        case "gpr-mobile-app-box":
+          gprMobileAppBoxApplyStyle();
+          break;
+        case "gpr-mobile-app-text-box":
+          gprMobileAppBoxApplyStyle();
+          break;
+        case "gpr-event-driven-box":
+          gprEventDrivenBoxApplyStyle();
+          break;
+        case "gpr-event-driven-text-box":
+          gprEventDrivenBoxApplyStyle();
+          break;
         case "gpr-governance-box":
           $gprDefault.style.opacity = "0";
 
@@ -175,12 +300,32 @@
         case "gpr-scenarios-text-box":
           gprScenariosBoxRemoveStyle();
           break;
-
         case "gpr-a2a-box":
           gprA2aBoxRemoveStyle();
           break;
         case "gpr-a2a-text-box":
           gprA2aBoxRemoveStyle();
+          break;
+        case "gpr-b2b-box":
+          gprB2bBoxRemoveStyle();
+          break;
+        case "gpr-erp-box":
+          gprErpBoxRemoveStyle();
+          break;
+        case "gpr-erp-text-box":
+          gprErpBoxRemoveStyle();
+          break;
+        case "gpr-cloud-services-box":
+          gprCloudBoxRemoveStyle();
+          break;
+        case "gpr-spa-box":
+          gprSpaBoxRemoveStyle();
+          break;
+        case "gpr-mobile-app-box":
+          gprMobileAppBoxRemoveStyle();
+          break;
+        case "gpr-event-driven-box":
+          gprEventDrivenBoxRemoveStyle();
           break;
 
         case "gpr-scenarios-box-1":
