@@ -46,7 +46,9 @@ h1 {
 .gpr-operation-info,
 .gpr-deploy-info,
 .gpr-integrations-info,
-.gpr-extensions-info {
+.gpr-extensions-info,
+.gpr-built-in-app-info,
+.gpr-embedded-app-info {
   width: 100%;
   margin: 0;
   padding: 1rem 4rem;
