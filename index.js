@@ -437,6 +437,9 @@
         case "gpr-b2b-box":
           gprB2bBoxRemoveStyle();
           break;
+        case "gpr-b2b-text-box":
+          gprB2bBoxRemoveStyle();
+          break;
         case "gpr-erp-box":
           gprErpBoxRemoveStyle();
           break;
@@ -446,13 +449,28 @@
         case "gpr-cloud-services-box":
           gprCloudBoxRemoveStyle();
           break;
+        case "gpr-cloud-services-text1-box":
+          gprCloudBoxRemoveStyle();
+          break;
+        case "gpr-cloud-services-text2-box":
+          gprCloudBoxRemoveStyle();
+          break;
         case "gpr-spa-box":
+          gprSpaBoxRemoveStyle();
+          break;
+        case "gpr-spa-text-box":
           gprSpaBoxRemoveStyle();
           break;
         case "gpr-mobile-app-box":
           gprMobileAppBoxRemoveStyle();
           break;
+        case "gpr-mobile-app-text-box":
+          gprMobileAppBoxRemoveStyle();
+          break;
         case "gpr-event-driven-box":
+          gprEventDrivenBoxRemoveStyle();
+          break;
+        case "gpr-event-driven-text-box":
           gprEventDrivenBoxRemoveStyle();
           break;
         case "gpr-governance-box":
@@ -479,10 +497,19 @@
         case "gpr-extensions-box":
           gprExtensionsBoxRemoveStyle();
           break;
+        case "gpr-extensions-text-box":
+          gprExtensionsBoxRemoveStyle();
+          break;
         case "gpr-built-in-app-box":
           gprBuiltAppBoxRemoveStyle();
           break;
+        case "gpr-built-in-app-text-box":
+          gprBuiltAppBoxRemoveStyle();
+          break;
         case "gpr-embedded-app-box":
+          gprEmbeddedAppBoxRemoveStyle();
+          break;
+        case "gpr-embedded-app-text-box":
           gprEmbeddedAppBoxRemoveStyle();
           break;
         case "gpr-integrations-box":
