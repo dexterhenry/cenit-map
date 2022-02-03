@@ -37,6 +37,14 @@
       // Governance Box Section Selectors
       $gprGovernanceInfo = d.querySelector(".gpr-governance-info"),
       $gprGovernanceSHover = d.querySelector("#gpr-governance-box"),
+      $gprGovernanceRoleBasedUserInfo = d.querySelector(
+        ".gpr-role-based-user-info"
+      ),
+      $gprGovernanceRoleBasedUserHover = d.querySelector(
+        "#gpr-role-based-user-box"
+      ),
+      $gprMultitenancyInfo = d.querySelector(".gpr-multitenancy-info"),
+      $gprMultitenancyHover = d.querySelector("#gpr-multitenancy-box"),
       // Core Box Section Selectors
       $gprCoreInfo = d.querySelector(".gpr-core-info"),
       $gprCoreHover = d.querySelector("#gpr-core-box"),
@@ -133,6 +141,18 @@
       $gprDefault.style.opacity = "0";
       $gprGovernanceInfo.style.opacity = "1";
       $gprGovernanceSHover.style.cssText = gprStyle;
+    };
+
+    const gprGovernanceRoleBasedUserBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprGovernanceRoleBasedUserInfo.style.opacity = "1";
+      $gprGovernanceRoleBasedUserHover.style.cssText = gprStyle;
+    };
+
+    const gprMultitenancyBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprMultitenancyInfo.style.opacity = "1";
+      $gprMultitenancyHover.style.cssText = gprStyle;
     };
 
     const gprCoreBoxApplyStyle = () => {
@@ -303,6 +323,19 @@
       $gprDeployInfo.style.opacity = "0";
       $gprDeployHover.removeAttribute("style");
     };
+
+    const gpGovernanceRoleBasedUserRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprGovernanceRoleBasedUserInfo.style.opacity = "0";
+      $gprGovernanceRoleBasedUserHover.removeAttribute("style");
+    };
+
+    const gprMultitenancyRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprMultitenancyInfo.style.opacity = "0";
+      $gprMultitenancyHover.removeAttribute("style");
+    };
+
     // End Functions Section
 
     // Mouse over boxes Section
@@ -310,6 +343,7 @@
       e.preventDefault();
 
       switch (e.target.id) {
+        // scenarios section
         case "gpr-scenarios-box":
           gprScenariosBoxApplyStyle();
           break;
@@ -364,9 +398,26 @@
         case "gpr-event-driven-text-box":
           gprEventDrivenBoxApplyStyle();
           break;
+        // governance section
         case "gpr-governance-box":
           gprGovernanceBoxApplyStyle();
           break;
+        case "gpr-role-based-user-box":
+          gprGovernanceRoleBasedUserBoxApplyStyle();
+          break;
+        case "gpr-role-based-user-text1-box":
+          gprGovernanceRoleBasedUserBoxApplyStyle();
+          break;
+        case "gpr-role-based-user-text2-box":
+          gprGovernanceRoleBasedUserBoxApplyStyle();
+          break;
+        case "gpr-multitenancy-box":
+          gprMultitenancyBoxApplyStyle();
+          break;
+        case "gpr-multitenancy-text-box":
+          gprMultitenancyBoxApplyStyle();
+          break;
+
         case "gpr-core-box":
           gprCoreBoxApplyStyle();
           break;
@@ -417,7 +468,7 @@
     // Mouse out boxes Section
     $svgMap.addEventListener("mouseout", (e) => {
       e.preventDefault();
-
+      // scenarios section
       switch (e.target.id) {
         case "gpr-scenarios-box":
           gprScenariosBoxRemoveStyle();
@@ -473,9 +524,26 @@
         case "gpr-event-driven-text-box":
           gprEventDrivenBoxRemoveStyle();
           break;
+        // governance section
         case "gpr-governance-box":
           gprGovernanceBoxRemoveStyle();
           break;
+        case "gpr-role-based-user-box":
+          gpGovernanceRoleBasedUserRemoveStyle();
+          break;
+        case "gpr-role-based-user-text1-box":
+          gpGovernanceRoleBasedUserRemoveStyle();
+          break;
+        case "gpr-role-based-user-text2-box":
+          gpGovernanceRoleBasedUserRemoveStyle();
+          break;
+        case "gpr-multitenancy-box":
+          gprMultitenancyRemoveStyle();
+          break;
+        case "gpr-multitenancy-text-box":
+          gprMultitenancyRemoveStyle();
+          break;
+
         case "gpr-core-box":
           gprCoreBoxRemoveStyle();
           break;
