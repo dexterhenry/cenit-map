@@ -45,6 +45,8 @@
       ),
       $gprMultitenancyInfo = d.querySelector(".gpr-multitenancy-info"),
       $gprMultitenancyHover = d.querySelector("#gpr-multitenancy-box"),
+      $gprAuditTrailsInfo = d.querySelector(".gpr-audit-trails-info"),
+      $gprAuditTrailsHover = d.querySelector("#gpr-audit-trails-box"),
       // Core Box Section Selectors
       $gprCoreInfo = d.querySelector(".gpr-core-info"),
       $gprCoreHover = d.querySelector("#gpr-core-box"),
@@ -203,6 +205,12 @@
       $gprDeployHover.style.cssText = gprStyle;
     };
 
+    const gprAuditTrailsBoxApplyStyle = () => {
+      $gprDefault.style.opacity = "0";
+      $gprAuditTrailsInfo.style.opacity = "1";
+      $gprAuditTrailsHover.style.cssText = gprStyle;
+    };
+
     // Functions section to remove box styles
     const gprA2aBoxRemoveStyle = () => {
       $gprDefault.style.opacity = "1";
@@ -336,6 +344,11 @@
       $gprMultitenancyHover.removeAttribute("style");
     };
 
+    const gprAuditTrailsRemoveStyle = () => {
+      $gprDefault.style.opacity = "1";
+      $gprAuditTrailsInfo.style.opacity = "0";
+      $gprAuditTrailsHover.removeAttribute("style");
+    };
     // End Functions Section
 
     // Mouse over boxes Section
@@ -402,6 +415,9 @@
         case "gpr-governance-box":
           gprGovernanceBoxApplyStyle();
           break;
+        case "gpr-governance-text-box":
+          gprGovernanceBoxApplyStyle();
+          break;
         case "gpr-role-based-user-box":
           gprGovernanceRoleBasedUserBoxApplyStyle();
           break;
@@ -417,46 +433,62 @@
         case "gpr-multitenancy-text-box":
           gprMultitenancyBoxApplyStyle();
           break;
-
+        case "gpr-audit-trails-box":
+          gprAuditTrailsBoxApplyStyle();
+          break;
+        case "gpr-audit-trails-text-box":
+          gprAuditTrailsBoxApplyStyle();
+          break;
+        // core section
         case "gpr-core-box":
           gprCoreBoxApplyStyle();
           break;
+        // flow section
         case "gpr-flow-box":
           gprFlowBoxApplyStyle();
           break;
+        // pic section
         case "gpr-pic-box":
           gprPicBoxApplyStyle();
           break;
+        // format-pma section
         case "gpr-format-pma-box":
           gprFormatPmaBoxApplyStyle();
           break;
+        // monitoring section
         case "gpr-monitoring-box":
           gprMonitoringBoxApplyStyle();
           break;
+        // operation section
         case "gpr-operation-box":
           gprOperationBoxApplyStyle();
           break;
+        // extensions section
         case "gpr-extensions-box":
           gprExtensionsBoxApplyStyle();
           break;
         case "gpr-extensions-text-box":
           gprExtensionsBoxApplyStyle();
           break;
+        // built in app section
         case "gpr-built-in-app-box":
           gprBuiltAppBoxApplyStyle();
           break;
         case "gpr-built-in-app-text-box":
           gprBuiltAppBoxApplyStyle();
           break;
+        // embedded app section
         case "gpr-embedded-app-box":
           gprEmbeddedAppBoxApplyStyle();
           break;
         case "gpr-embedded-app-text-box":
           gprEmbeddedAppBoxApplyStyle();
           break;
+        // integrations section
         case "gpr-integrations-box":
           gprIntegrationsBoxApplyStyle();
           break;
+        // deploy section
         case "gpr-deploy-box":
           gprDeployBoxApplyStyle();
           break;
@@ -528,6 +560,9 @@
         case "gpr-governance-box":
           gprGovernanceBoxRemoveStyle();
           break;
+        case "gpr-governance-text-box":
+          gprGovernanceBoxRemoveStyle();
+          break;
         case "gpr-role-based-user-box":
           gpGovernanceRoleBasedUserRemoveStyle();
           break;
@@ -543,46 +578,62 @@
         case "gpr-multitenancy-text-box":
           gprMultitenancyRemoveStyle();
           break;
-
+        case "gpr-audit-trails-box":
+          gprAuditTrailsRemoveStyle();
+          break;
+        case "gpr-audit-trails-text-box":
+          gprAuditTrailsRemoveStyle();
+          break;
+        // core section
         case "gpr-core-box":
           gprCoreBoxRemoveStyle();
           break;
+        // flow section
         case "gpr-flow-box":
           gprFlowBoxRemoveStyle();
           break;
+        // pic section
         case "gpr-pic-box":
           gprPicBoxRemoveStyle();
           break;
+        // format-pma section
         case "gpr-format-pma-box":
           gpFormatPmaRemoveStyle();
           break;
+        // monitoring section
         case "gpr-monitoring-box":
           gpMonitoringRemoveStyle();
           break;
+        // operation section
         case "gpr-operation-box":
           gpOperationRemoveStyle();
           break;
+        // extensions section
         case "gpr-extensions-box":
           gprExtensionsBoxRemoveStyle();
           break;
         case "gpr-extensions-text-box":
           gprExtensionsBoxRemoveStyle();
           break;
+        // built in app section
         case "gpr-built-in-app-box":
           gprBuiltAppBoxRemoveStyle();
           break;
         case "gpr-built-in-app-text-box":
           gprBuiltAppBoxRemoveStyle();
           break;
+        // embedded app section
         case "gpr-embedded-app-box":
           gprEmbeddedAppBoxRemoveStyle();
           break;
         case "gpr-embedded-app-text-box":
           gprEmbeddedAppBoxRemoveStyle();
           break;
+        // integrations section
         case "gpr-integrations-box":
           gpIntegrationsRemoveStyle();
           break;
+        // deploy section
         case "gpr-deploy-box":
           gpDeployRemoveStyle();
           break;
