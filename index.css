@@ -60,7 +60,10 @@ h1 {
 .gpr-integrations-info,
 .gpr-extensions-info,
 .gpr-built-in-app-info,
-.gpr-embedded-app-info {
+.gpr-embedded-app-info,
+.gpr-role-based-user-info,
+.gpr-multitenancy-info,
+.gpr-audit-trails-info {
   width: 100%;
   margin: 0;
   padding: 1rem 4rem 0;
