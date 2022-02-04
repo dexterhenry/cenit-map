@@ -1,7 +1,19 @@
 /* reset */
-* {
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 /* title */
@@ -20,6 +32,7 @@ h1 {
   width: 70vw;
   display: flex;
   justify-content: center;
+  padding-bottom: 0.75rem;
 }
 
 .container-svg img {
@@ -27,9 +40,15 @@ h1 {
 }
 
 /* info section */
-
 .gpr-default-info,
 .gpr-scenarios-info,
+.gpr-scenarios-a2a-info,
+.gpr-scenarios-b2b-info,
+.gpr-scenarios-erp-info,
+.gpr-scenarios-cloud-services-info,
+.gpr-scenarios-spa-info,
+.gpr-scenarios-mobile-app-info,
+.gpr-scenarios-event-driven-info,
 .gpr-governance-info,
 .gpr-pic-info,
 .gpr-flow-info,
@@ -39,10 +58,15 @@ h1 {
 .gpr-operation-info,
 .gpr-deploy-info,
 .gpr-integrations-info,
-.gpr-extensions-info {
+.gpr-extensions-info,
+.gpr-built-in-app-info,
+.gpr-embedded-app-info,
+.gpr-role-based-user-info,
+.gpr-multitenancy-info,
+.gpr-audit-trails-info {
   width: 100%;
   margin: 0;
-  padding: 1rem 4rem;
+  padding: 1rem 4rem 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -58,8 +82,28 @@ h1 {
 }
 
 .gpr-wrapper {
-  width: 90vw;
+  width: 100%;
   height: 1rem;
   position: relative;
   box-sizing: border-box;
+  margin-top: -100px;
+}
+
+.info-title {
+  height: 3rem;
+}
+
+.box {
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  min-height: 200px;
+  width: 50vw;
+  margin: 100px auto;
+  background: white;
+  border-radius: 5px;
+}
+body {
+  background: #eef2f7;
 }
